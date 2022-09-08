@@ -59,3 +59,19 @@ function birthdayCakeCandles(candles) {
   return candleSum;
 }
 birthdayCakeCandles(candles);
+
+// Solution 3
+let candles = [3, 2, 1, 3];
+
+function birthdayCakeCandles(candles) {
+  let tallest = Math.max(...candles);
+  let sum = 0;
+  candles.forEach((item) => {
+    if (item == tallest) {
+      sum += 1;
+    }
+  });
+  console.log(sum);
+  return sum;
+}
+birthdayCakeCandles(candles);
