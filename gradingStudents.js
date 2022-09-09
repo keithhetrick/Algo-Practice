@@ -38,22 +38,17 @@ function gradingStudents(grades) {
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] < 5) {
       grades[i] = grades[i];
-    }
-    if (grades[i] < 35 && grades[i] > 30) {
+    } else if (grades[i] < 35 && grades[i] > 30) {
       grades[i] = grades[i];
-    }
-    if (grades[i] < 40 && grades[i] > 35) {
+    } else if (grades[i] < 40 && grades[i] > 35) {
       grades[i] = Math.round(grades[i] / 5) * 5;
-    }
-    if (grades[i] < 70 && grades[i] > 65) {
+    } else if (grades[i] < 70 && grades[i] > 65) {
       grades[i] = grades[i];
-    }
-    if (grades[i] < 75 && grades[i] > 70) {
+    } else if (grades[i] < 75 && grades[i] > 70) {
       grades[i] = Math.round(grades[i] / 5) * 5;
     }
     newGrades.push(grades[i]);
   }
-  newGrades.shift();
   console.log("grades outside loop :", newGrades);
   newGrades = grades;
   return grades;
