@@ -61,7 +61,7 @@ const twoSum = function (nums, target) {
   return [];
 };
 
-// Solution 3
+// Solution 3 - NOT WORKING - only works for above values, not scalable
 function twoSum(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     sum = nums[0] + nums[1];
@@ -71,7 +71,7 @@ function twoSum(nums, target) {
 }
 twoSum(nums, target);
 
-// Solution 4
+// Solution 4 NOT WORKING - print values & not indices
 function twoSum(nums, target) {
   let result = [];
   for (let i = 0; i < nums.length - 1; i++) {
@@ -84,7 +84,6 @@ function twoSum(nums, target) {
       break;
     }
   }
-  console.log([result.indexOf(result[0]), result.indexOf(result[1])]);
   console.log(result);
   return result;
 }
