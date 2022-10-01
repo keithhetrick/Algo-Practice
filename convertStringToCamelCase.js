@@ -52,3 +52,15 @@ console.log(toCamelCase("The-Stealth-Warrior"));
 console.log(toCamelCase("A-B-C"));
 console.log(toCamelCase("i-am-a-programmer"));
 console.log(toCamelCase("I-Am-A-Programmer"));
+
+// algo 3
+function camelCase(str) {
+  return str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+}
+
+console.log(camelCase(""));
+console.log(camelCase("the_stealth_warrior"));
+console.log(camelCase("The-Stealth-Warrior"));
+console.log(camelCase("A-B-C"));
+console.log(camelCase("i-am-a-programmer"));
+console.log(camelCase("I-Am-A-Programmer"));
