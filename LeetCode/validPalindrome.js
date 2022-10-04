@@ -47,5 +47,4 @@ function isPalindrome(s) {
   // Return true
   return true;
 }
-
-module.exports = isPalindrome;
+isPalindrome();
