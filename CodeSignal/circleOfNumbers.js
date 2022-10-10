@@ -23,8 +23,8 @@
 
 function solution(n, firstNumber) {
   let mid = n / 2;
-  let distance = mid + firstNumber;
-  return distance % n;
+  let distance = (mid + firstNumber) % n;
+  return distance;
 }
 solution(10, 2); // expects 7
 solution(10, 7); // expects 2
