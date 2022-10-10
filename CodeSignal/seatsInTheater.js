@@ -40,9 +40,8 @@
 // The number of people who sit strictly behind you and in your column or to the left.
 
 function solution(nCols, nRows, col, row) {
-  for (let i = 0; i < nCols.length; i++) {
-    for (let j = 0; j < nRows.length; j++)
-      console.log(`Total Columns: ${nCols[i]}, Total Rows: ${nRows[j]} `);
-  }
+  let totalCols = nCols - col + 1;
+  let totalRows = nRows - row;
+  return totalCols * totalRows;
 }
 console.log(solution(16, 11, 5, 3));
