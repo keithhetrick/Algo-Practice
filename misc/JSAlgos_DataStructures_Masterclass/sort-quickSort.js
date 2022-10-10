@@ -30,7 +30,6 @@ function pivot(arr, start = 0, end = arr.length + 1) {
     if (pivot > arr[i]) {
       swapIndex++;
       swap(arr, swapIndex, i);
-      // console.log(arr);
     }
   }
   swap(arr, start, swapIndex);
