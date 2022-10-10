@@ -17,5 +17,5 @@ function insertionSort(arr) {
   }
   return arr;
 }
-insertionSort([2, 1, 9, 76, 4]);
-insertionSort([1, 2, 3, 4, -1]);
+console.log(insertionSort([2, 1, 9, 76, 4]));
+console.log(insertionSort([1, 2, 3, 4, -1]));
