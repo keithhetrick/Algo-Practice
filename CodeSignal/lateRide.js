@@ -38,7 +38,6 @@ function solution(n) {
   for (let i = 0; i < splitNums.length; i++) {
     sum += splitNums[i];
   }
-  // return `${n} minutes = ${hours} hour(s) and ${minute} minute(s).`;
   return sum;
 }
 solution(240); // expects 4
