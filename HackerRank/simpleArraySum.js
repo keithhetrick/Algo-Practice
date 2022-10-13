@@ -1,3 +1,5 @@
+// Simple Array Sum
+
 // Given an array of integers, find the sum of its elements.
 
 // For example, if the array ar=[1,2,3],1+2+3=6, so return 6.
@@ -18,9 +20,9 @@
 // Output Format
 // Print the sum of the array's elements as a single integer.
 
-let sum = 0;
-
 function simpleArraySum(arr) {
+  let sum = 0;
+
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }

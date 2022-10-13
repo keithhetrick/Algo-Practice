@@ -1,3 +1,5 @@
+// Compare the Triplets
+
 // Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, awarding points on a scale from 1 to 100 for three categories: problem clarity, originality, and difficulty.
 
 // The rating for Alice's challenge is the triplet a = (a[0], a[1], a[2]), and the rating for Bob's challenge is the triplet b = (b[0], b[1], b[2]).
@@ -38,12 +40,10 @@
 // 1 ≤ a[i] ≤ 100
 // 1 ≤ b[i] ≤ 100
 
-let a = [5, 6, 7];
-let b = [3, 6, 10];
-let scoreOfA = 0;
-let scoreOfB = 0;
-
 function compareTriplets(a, b) {
+  let scoreOfA = 0;
+  let scoreOfB = 0;
+
   for (let i = 0; i <= a.length; i++) {
     if (a[i] > b[i]) {
       scoreOfA += 1;
@@ -54,4 +54,4 @@ function compareTriplets(a, b) {
   console.log(scoreOfA, scoreOfB);
   return [scoreOfA, scoreOfB];
 }
-compareTriplets(a, b);
+compareTriplets([5, 6, 7], [3, 6, 10]);

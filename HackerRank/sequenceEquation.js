@@ -1,3 +1,5 @@
+// Sequence Equation
+
 function permutationEquation(p) {
   // let x = [] //
   // let newArr = [];

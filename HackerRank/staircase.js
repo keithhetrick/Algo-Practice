@@ -1,4 +1,4 @@
-// Staircase detail
+// Staircase
 
 // This is a staircase of size n = 4:
 //    #
