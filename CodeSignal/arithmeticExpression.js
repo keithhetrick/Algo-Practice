@@ -23,10 +23,7 @@
 // So the answer is false.
 
 function solution(a, b, c) {
-  if (a - b === c) return true;
-  if (a + b === c) return true;
-  if (a * b === c) return true;
-  if (a / b === c) return true;
+  if (a - b === c || a + b === c || a * b === c || a / b === c) return true;
   else return false;
 }
 solution(2, 3, 5); // expects true
