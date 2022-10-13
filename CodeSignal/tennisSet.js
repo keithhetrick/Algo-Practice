@@ -40,10 +40,15 @@ function tennisSet(score1, score2) {
   if (score2 == 6 && score1 < 5) return true;
   if (score2 == 7 && score1 == 6) return true;
   if (score2 == 7 && score1 == 5) return true;
-
-  return false;
+  else return false;
 }
-console.log(tennisSet(3, 6));
-console.log(tennisSet(7, 6));
-console.log(tennisSet(7, 5));
-console.log(tennisSet(7, 2));
+tennisSet(3, 6); // expects true
+tennisSet(8, 5); // expects true
+tennisSet(6, 5); // expects false
+tennisSet(7, 7); // expects false
+tennisSet(6, 4); // expects true
+tennisSet(7, 5); // expects true
+tennisSet(7, 2); // expects false
+tennisSet(7, 6); // expects true
+tennisSet(4, 10); // expects false
+tennisSet(0, 0); // expects false
