@@ -18,7 +18,7 @@
 // The 4th bit is 0 already (looks like the Mad Coder forgot to encrypt this number), so the answer is still 37.
 
 function solution(n, k) {
-  return;
+  return n & ~(1 << (k - 1));
 }
 solution(37, 3); // expects 33
 solution(37, 4); // expects 37
