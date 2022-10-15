@@ -17,6 +17,11 @@
 
 // The 4th bit is 0 already (looks like the Mad Coder forgot to encrypt this number), so the answer is still 37.
 
+// JavaScript Bitwise Operators
+// https://www.w3schools.com/jsref/jsref_operators.asp
+
+// DO FURTHER RESEARCH ON BITWISE OPERATORS IN JAVASCRIPT
+
 function solution(n, k) {
   return n & ~(1 << (k - 1));
 }
