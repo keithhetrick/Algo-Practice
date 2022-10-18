@@ -1,3 +1,5 @@
+// Breaking Records
+
 // Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. She tabulates the number of times she breaks her season record for most points and least points in a game. Points scored in the first game establish her record for the season, and she begins counting from there.
 
 // Example:
@@ -37,9 +39,22 @@
 // Sample Output 0
 // 2 4
 
-let games = 10;
-
 function breakingRecords(scores) {
-  return;
+  let max = scores[0];
+  let min = scores[0];
+  let rHigh = 0;
+  let rLow = 0;
+
+  for (let i = 0; i < scores.length; i++) {
+    if (scores[i] > max) {
+      max = scores[i];
+      rHigh++;
+    } else if (scores[i] < min) {
+      min = scores[i];
+      rLow++;
+    }
+  }
+  return [rHigh, rLow];
 }
-breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]);
+breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]); // expects [2, 4]
+breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]); // expects [4, 0]

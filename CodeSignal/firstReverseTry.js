@@ -1,13 +1,15 @@
 // First Reverse Try
 
-function solution(arr) {
-  // let newArr = [];
-  // for (let i = arr.length - 1; i >= 0; i--) {
-  //   if (arr === null) return newArr;
-  //   else newArr.push(arr[i]);
-  // }
-  // return newArr;
+// Reversing an array can be a tough task, especially for a novice programmer. Mary just started coding, so she would like to start with something basic at first. Instead of reversing the array entirely, she wants to swap just its first and last elements.
 
+// Given an array arr, swap its first and last elements and return the resulting array.
+
+// Example
+
+// For arr = [1, 2, 3, 4, 5], the output should be
+// solution(arr) = [5, 2, 3, 4, 1].
+
+function solution(arr) {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if (i === 0) newArr.push(arr[arr.length - 1]);

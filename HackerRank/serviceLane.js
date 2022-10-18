@@ -1,3 +1,5 @@
+// Service Lane
+
 // A driver is driving on the freeway. The check engine light of his vehicle is on, and the driver wants to get service immediately. Luckily, a service lane runs parallel to the highway. It varies in width along its length.
 
 // function serviceLane(n, cases) {
@@ -7,6 +9,7 @@
 
 function serviceLane(n, cases, width) {
   let answers = "";
+
   for (let i = 0; i < cases.length; i++) {
     let arr = width.slice(cases[i][0], cases[i][0] + 1);
     let num = arr[0];
@@ -17,7 +20,6 @@ function serviceLane(n, cases, width) {
     }
     answers = answers + num + "\n";
   }
-  console.log(answers);
   return answers;
 }
 serviceLane(

@@ -31,10 +31,14 @@
 function solution(n) {
   let minute = n % 60;
   let hours = Math.floor(n / 60);
-  // let summedTime = hours + minute;
-  // let timeArr = [hours, minute];
+  let totalTime = "" + hours + minute;
+  let splitNums = Array.from(String(totalTime), Number);
+  let sum = 0;
 
-  return `${n} minutes = ${hours} hour(s) and ${minute} minute(s).`;
+  for (let i = 0; i < splitNums.length; i++) {
+    sum += splitNums[i];
+  }
+  return sum;
 }
 solution(240); // expects 4
 solution(808); // expects 14
