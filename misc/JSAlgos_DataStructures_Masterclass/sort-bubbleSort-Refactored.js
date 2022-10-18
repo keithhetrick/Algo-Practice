@@ -1,6 +1,6 @@
 // Bubble Sort
 
-// Brute Force, but less iterations thhru loop
+// Brute Force, but less iterations thru loop
 function bubbleSort(arr) {
   let noSwaps;
 

@@ -37,7 +37,7 @@ function bubbleSort(arr) {
 }
 console.log(bubbleSort([37, 45, 29, 8]));
 
-// Brute Force, but less iterations thhru loop
+// Brute Force, but less iterations thru loop
 function bubbleSort(arr) {
   for (let i = arr.length; i > 0; i--) {
     for (let j = 0; j < i - 1; j++) {
