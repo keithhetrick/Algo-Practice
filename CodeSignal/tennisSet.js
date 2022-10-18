@@ -1,4 +1,4 @@
-// 14. Tennis Set
+// Tennis Set
 
 // In tennis, the winner of a set is based on how many games each player wins. The first player to win 6 games is declared the winner unless their opponent had already won 5 games, in which case the set continues until one of the players has won 7 games.
 
@@ -40,15 +40,10 @@ function tennisSet(score1, score2) {
   if (score2 == 6 && score1 < 5) return true;
   if (score2 == 7 && score1 == 6) return true;
   if (score2 == 7 && score1 == 5) return true;
-  else return false;
+
+  return false;
 }
-tennisSet(3, 6); // expects true
-tennisSet(8, 5); // expects true
-tennisSet(6, 5); // expects false
-tennisSet(7, 7); // expects false
-tennisSet(6, 4); // expects true
-tennisSet(7, 5); // expects true
-tennisSet(7, 2); // expects false
-tennisSet(7, 6); // expects true
-tennisSet(4, 10); // expects false
-tennisSet(0, 0); // expects false
+console.log(tennisSet(3, 6));
+console.log(tennisSet(7, 6));
+console.log(tennisSet(7, 5));
+console.log(tennisSet(7, 2));

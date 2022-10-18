@@ -1,5 +1,3 @@
-// Time Conversion
-
 // Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
 
 // Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
@@ -27,6 +25,8 @@
 // Constraints
 // All input times are valid
 
+let s = "07:05:45PM";
+
 function timeConversion(s) {
   let lastTwo = s.substring(8);
   let fullTime = s.substring(0, 8);
@@ -45,4 +45,4 @@ function timeConversion(s) {
   console.log(times.join(":"));
   return times.join(":");
 }
-timeConversion("07:05:45PM");
+timeConversion(s);

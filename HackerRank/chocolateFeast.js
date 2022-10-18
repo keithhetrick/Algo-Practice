@@ -1,5 +1,3 @@
-// Chocolate Feast
-
 function chocolateFeast(n, c, m) {
   let count = 0;
   //subtract c from n

@@ -1,5 +1,3 @@
-// Diagonal Difference
-
 function diagonalDifference(arr) {
   let leftToRight = 0;
   let rightToLeft = 0;

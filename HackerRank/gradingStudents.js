@@ -1,5 +1,3 @@
-// Grading Students
-
 // Function Description
 // Complete the function gradingStudents in the editor below.
 // gradingStudents has the following parameter(s):

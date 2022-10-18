@@ -1,5 +1,3 @@
-// Solve Me First
-
 // Complete the function solveMeFirst to compute the sum of two integers.
 
 // Example
@@ -20,7 +18,12 @@
 // Constraints
 // 1 ≤ a,b ≤ 1000
 
-function solveMeFirst(a, b) {
-  return a + b;
+a = 2;
+b = 3;
+
+function solveMeFirst() {
+  let sum = a + b;
+  console.log("the sum is: ", sum);
+  return sum;
 }
-solveMeFirst(2, 3);
+solveMeFirst();

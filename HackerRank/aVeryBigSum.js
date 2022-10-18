@@ -1,5 +1,3 @@
-// A Very Big Sum
-
 // print the sum of the elements in an array & return the sum of all array elements.
 
 // aVeryBigSum has the following parameter(s):
