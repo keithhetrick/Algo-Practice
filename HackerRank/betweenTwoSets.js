@@ -49,32 +49,15 @@
 // 4, 8 and 16 are the only three numbers for which each element of a is a factor and each is a factor of all elements of b.
 
 function getTotalX(a, b) {
-  let count = 0;
-  let minA = 0;
-
-  for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < b.length; j++) {
-      if (a[i] < a[i + 1]) {
-        minA = a[i + 1] % a[i];
-        count++;
-      }
-      if (j[i] < j[i + 1]) {
-        minB = j[i + 1] % minA;
-        console.log(minB, minA);
-      }
-    }
+  let possible = [],
+    final = [];
+  for (let i = a[a.length - 1]; i <= b[0]; i++) {
+    if (a.every((x) => i % x === 0)) possible.push(i);
   }
-  return count;
-
-  // let sumA = 0;
-  // let sumB = 0;
-  // result = 0;
-
-  // for (const num of a) sumA = sumA + num * num;
-  // for (const num of b) sumB = sumB + num * num;
-  // if (sumA > sumB) result = sumA % sumB;
-  // if (sumA < sumB) result = sumB % sumA;
-  // return result;
+  for (let i = 0, len = possible.length; i < len; i++) {
+    if (b.every((x) => x % possible[i] === 0)) final.push(possible[i]);
+  }
+  return final.length;
 }
 getTotalX([2, 4], [16, 32, 96]); // expects 3
 getTotalX([2], [20, 30, 12]); // expects 1
