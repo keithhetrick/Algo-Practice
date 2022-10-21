@@ -18,33 +18,6 @@
 // Explanation: In this case, no transactions are done and the max profit = 0.
 
 function maxProfit(prices) {
-  // let maxDifference = 0;
-  // for (let i = 0; i < prices.length; i++) {
-  //   for (let j = i + 1; j < prices.length; j++) {
-  //     let difference = prices[j] - prices[i];
-
-  //     if (difference > maxDifference) {
-  //       maxDifference = difference;
-  //     }
-  //   }
-  // }
-  // return maxDifference;
-
-  // let left = 0; // Buy
-  // let right = 1; // sell
-  // let max_profit = 0;
-  // while (right < prices.length) {
-  //   if (prices[left] < prices[right]) {
-  //     let profit = prices[right] - prices[left]; // our current profit
-
-  //     max_profit = Math.max(max_profit, profit);
-  //   } else {
-  //     left = right;
-  //   }
-  //   right++;
-  // }
-  // return max_profit;
-
   let profit = 0;
   for (let i = 0; i < prices.length - 1; i++) {
     for (let j = i + 1; j < prices.length; j++) {
@@ -57,18 +30,7 @@ function maxProfit(prices) {
   }
 
   return profit;
-
-  // let largest = "";
-  // let smallest = "";
-  // for (let i = 0; i < prices.length; i++) {
-  //   if (prices[i] > largest) {
-  //     largest = prices[i];
-  //   }
-  //   if (prices[i] < smallest) {
-  //     smallest = prices[i];
-  //   }
-  //   console.log(largest);
-  // }
 }
+
 maxProfit([7, 1, 5, 3, 6, 4]); // expects 5
 maxProfit([7, 6, 4, 3, 1]); // expects 0
