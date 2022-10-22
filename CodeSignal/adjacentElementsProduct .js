@@ -1,4 +1,5 @@
 // Adjacent Elements Product
+// https://app.codesignal.com/arcade/intro/level-2/xzKiBHjhoinnpdh6m
 
 // Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
 
@@ -10,18 +11,10 @@
 // 7 and 3 produce the largest product.
 
 function solution(inputArray) {
-  let largest = 0;
-
-  for (let i = 0; i < inputArray.length; i++) {
-    iSum = inputArray[i] * inputArray[i + 1];
-    for (let j = 0; j < inputArray.length; j++) {
-      jSum = inputArray[j] * inputArray[j + 1];
-      if (iSum > jSum) {
-        largest = iSum;
-      }
-      if (jSum > iSum) {
-        largest = jSum;
-      }
+  let largest = inputArray[0] * inputArray[1];
+  for (let i = 1; i < inputArray.length - 1; i++) {
+    if (inputArray[i] * inputArray[i + 1] > largest) {
+      largest = inputArray[i] * inputArray[i + 1];
     }
   }
   return largest;
