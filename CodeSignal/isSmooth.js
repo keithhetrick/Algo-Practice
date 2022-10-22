@@ -21,11 +21,11 @@
 function solution(arr) {
   let start = arr[0];
   let end = arr[arr.length - 1];
-  let middle1 = Math.floor(arr.length / 2);
-  let middle2 = arr[middle1 - 1];
-  let middle = arr[middle1] + (arr.length % 2 ? 0 : middle2);
+  let mid1 = Math.floor(arr.length / 2);
+  let mid2 = Math.floor(arr[mid1 - 1]);
+  let middle = arr[mid1] + (arr.length % 2 ? 0 : mid2);
 
-  return start === end && start === middle;
+  return start === middle && middle === end;
 }
 solution([7, 2, 2, 5, 10, 7]); // expects true
 solution([-5, -5, 10]); // expects false
