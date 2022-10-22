@@ -1,3 +1,5 @@
+// Count Groups
+
 function countGroups(related) {
   let count = 0;
   const visited = new Set();
