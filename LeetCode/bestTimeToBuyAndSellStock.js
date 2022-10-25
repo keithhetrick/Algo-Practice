@@ -1,4 +1,5 @@
 // 121. Best Time to Buy and Sell Stock
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 // You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
@@ -18,18 +19,18 @@
 // Explanation: In this case, no transactions are done and the max profit = 0.
 
 function maxProfit(prices) {
-  let profit = 0;
-  for (let i = 0; i < prices.length - 1; i++) {
-    for (let j = i + 1; j < prices.length; j++) {
-      let currentProfit = prices[j] - prices[i];
+  let maxProfit = 0;
+  let minPrice = prices[0];
 
-      if (currentProfit > profit) {
-        profit = currentProfit;
-      }
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
+    } else if (prices[i] - minPrice > maxProfit) {
+      maxProfit = prices[i] - minPrice;
     }
   }
 
-  return profit;
+  return maxProfit;
 }
 
 maxProfit([7, 1, 5, 3, 6, 4]); // expects 5
