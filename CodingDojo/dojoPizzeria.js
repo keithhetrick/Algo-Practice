@@ -102,6 +102,8 @@ const toppings = [
   "mushrooms",
   "anchovies",
   "pineapple",
+  "brisket",
+  "short ribs",
   "ham",
   "bacon",
   "spinach",
@@ -123,6 +125,16 @@ const toppings = [
   "cucumber",
 ];
 
+const extraSauceTypes = [
+  "honey mustard",
+  "ketchup",
+  "mayo",
+  "sriracha",
+  "hot sauce",
+  "bbq",
+  "ranch",
+];
+
 function randomRange(max, min) {
   return Math.floor(Math.random() * max - min) + min;
 }
@@ -137,6 +149,7 @@ function randomPizza() {
 
   pizza.crustType = randomPick(crustTypes);
   pizza.sauceType = randomPick(sauceTypes);
+  pizza.extraSauceTypes = randomPick(extraSauceTypes);
   pizza.cheeses = [];
   pizza.toppings = [];
 
