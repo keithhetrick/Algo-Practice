@@ -7,6 +7,7 @@ function pizzaOven(crustType, sauceType, cheeses, toppings) {
   pizza.sauceType = sauceType;
   pizza.cheeses = cheeses;
   pizza.toppings = toppings;
+
   return pizza;
 }
 
