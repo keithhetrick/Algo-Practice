@@ -11,12 +11,20 @@
 // solution(n) = false.
 
 function solution(n) {
-  let squareRoot = Math.sqrt(n);
+  // let squareRoot = Math.sqrt(n);
 
-  if (squareRoot % 5 === 0) return true;
-  if (squareRoot % 3 === 1) return true;
-  if (squareRoot % 2 === 0) return true;
-  else return false;
+  // if (squareRoot % 5 === 0) return true;
+  // if (squareRoot % 3 === 1) return true;
+  // if (squareRoot % 2 === 0) return true;
+  // else return false;
+
+  if (n === 1) return true;
+  for (let i = 1; i < n; i++) {
+    for (let j = 2; j < n; j++) {
+      if (Math.pow(i, j) === n) return true;
+    }
+  }
+  return false;
 }
 solution(125); // expects true
 solution(72); // expects false
