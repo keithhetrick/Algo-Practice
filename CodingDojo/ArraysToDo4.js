@@ -48,6 +48,7 @@ function intermediateSums(arr) {
     arr.push(sum);
   }
   return arr;
+  //  [ 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 15, 1, 2, 1, 2, 6]
 }
 intermediateSums([1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]); // expects [1,2,1,2,1,2,1,2,1,2,15,1,2,1,2,6]
 
