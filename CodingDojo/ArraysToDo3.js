@@ -35,19 +35,18 @@ secondToLast([42, true, 4, "Kate", 7]); // expects "Kate"
 // Return the second-largest element of an array. Given [42,1,4,Math.PI,7], return 7. If the array is too short, return null.
 
 function secondLargest(arr) {
-  let max = arr[0];
-  let second = arr[0];
-  let tempMid = arr[0];
+  let max = 0;
+  let second = 0;
 
   if (arr.length < 2) {
     return null;
   }
-  for (let i = 1; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] > max) {
       max = arr[i];
     } else if (arr[i] < max) {
-      tempMid = arr[i];
-    } else if (arr[i] < max && arr[i] > tem) {
+      second = arr[i];
+    } else if (arr[i] > second && arr[i] < max) {
       second = arr[i];
     }
   }
