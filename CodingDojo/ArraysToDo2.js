@@ -51,6 +51,17 @@ filterRange([1, 2, 3, 4, 5, 6], 2, 4); // expects [2,3,4]
 // Replicate JavaScript's concat(). Create a standalone function that accepts two arrays. Return a new array containing the first array's elements, followed by the second array's elements. Do not alter the original arrays. Ex.: arrConcat( ['a','b'], [1,2] ) should return new array ['a','b',1,2].
 
 function arrConcat(arr1, arr2) {
+  // Without using built-in function
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    newArr.push(arr1[i]);
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    newArr.push(arr2[i]);
+  }
+  return newArr;
+
+  // Using built-in function
   return arr1.concat(arr2);
 }
 arrConcat(["a", "b"], [1, 2]); // expects ['a','b',1,2]
