@@ -35,22 +35,26 @@ secondToLast([42, true, 4, "Kate", 7]); // expects "Kate"
 // Return the second-largest element of an array. Given [42,1,4,Math.PI,7], return 7. If the array is too short, return null.
 
 function secondLargest(arr) {
+  let max = arr[0];
+  let second = arr[0];
+  let tempMid = arr[0];
+
   if (arr.length < 2) {
     return null;
   }
-  let max = arr[0];
-  let second = arr[0];
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] > max) {
-      second = max;
       max = arr[i];
-    } else if (arr[i] > second) {
+    } else if (arr[i] < max) {
+      tempMid = arr[i];
+    } else if (arr[i] < max && arr[i] > tem) {
       second = arr[i];
     }
   }
   return second;
 }
 secondLargest([42, 1, 4, Math.PI, 7]); // expects 7
+secondLargest([24, 11, 14, Math.PI, 9]); // expects 14
 
 // Nth-to-Last
 
@@ -104,3 +108,16 @@ function rotateArr(arr, shiftBy) {
   return arr;
 }
 rotateArr([1, 2, 3], 1); // expects [3,1,2]
+
+// Out of the last 100 days, there were 10 days with volcanoes, 15 with tsunamis, 20 earthquakes, 25 blizzards, and 30 meteors. If these probabilities continue, write whatHappensToday() to print a day's outcome.
+
+function whatHappensToday() {
+  let days = Math.random() * 100;
+
+  if (days < 10) return "volcano";
+  else if (days < 25) return "tsunami";
+  else if (days < 45) return "earthquake";
+  else if (days < 70) return "blizzard";
+  else if (days < 100) return "meteor";
+}
+whatHappensToday(); // expects "volcano", "tsunami", "earthquake", "blizzard", or "meteor"
