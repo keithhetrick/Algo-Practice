@@ -14,6 +14,8 @@ class BST {
     this.root = null;
   }
   // BST: ADD
+  // Create an add(val) method on the BST object to add new value to the tree. This entails creating a BTNode with this value and connecting it at the appropriate place in the tree. Unless specified otherwise, BSTs can contain duplicate values.
+
   add(value) {
     if (this.root) {
       let runner = this.root;
@@ -38,6 +40,9 @@ class BST {
     this.root = new Node(value);
     return this;
   }
+  // BST: CONTAINS
+  //  Create a contains(val) method on BST that returns whether the tree contains a given value. Take advantage of the BST structure to make this a much more rapid operation than SList.contains() would be.
+
   contains(value) {
     let runner = this.root;
     while (runner) {
@@ -58,6 +63,9 @@ class BST {
     }
     return false;
   }
+  // BST: MIN
+  // Create a min() method on the BST class that returns the smallest value found in the BST.
+
   min() {
     let runner = this.root;
     let min = this.root.value;
@@ -69,6 +77,9 @@ class BST {
     }
     return min;
   }
+  // BST: MAX
+  // Create a max() BST method that returns the largest value contained in the binary search tree.
+
   max() {
     let runner = this.root;
     let max = this.root.value;
@@ -80,6 +91,9 @@ class BST {
     }
     return max;
   }
+  // BST: SIZE
+  // Write a size() method that returns the number of nodes (values) contained in the tree.
+
   size() {
     if (this.root === null) {
       return 0;
@@ -92,6 +106,9 @@ class BST {
     }
     return sizeHelp(this.root);
   }
+  // BST: IS EMPTY
+  // Create an isEmpty() method to return whether the BST is empty (whether it contains no values).
+
   isEmpty() {
     if (this.root) {
       return false;
