@@ -13,6 +13,12 @@
 class SLL {
   // constructor, other methods, removed for brevity
   display() {
-    // neatly display nodes in my list
+    let runner = this.head;
+    let str = "";
+    while (runner) {
+      str += runner.data + ", ";
+      runner = runner.next;
+    }
+    return str;
   }
 }
