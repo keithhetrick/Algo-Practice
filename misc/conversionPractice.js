@@ -84,7 +84,7 @@ function generateRandomNumbersArray(n) {
 }
 generateRandomNumbersArray(15);
 
-function generateRandomNumbersAndAdd(n) {
+function generateRandomNumbersAndSum(n) {
   let sum = 0;
 
   for (let i = 0; i <= n; i++) {
@@ -97,4 +97,4 @@ function generateRandomNumbersAndAdd(n) {
   }
   return sum;
 }
-generateRandomNumbersAndAdd(15);
+generateRandomNumbersAndSum(15);
