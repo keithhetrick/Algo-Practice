@@ -142,3 +142,28 @@ function reverseArrayAndMultiplySumIndexes(arr) {
   return sum;
 }
 reverseArrayAndMultiplySumIndexes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function reverseArrayAndSubstitute(arr) {
+  let reverseArr = arr.reverse();
+  let str = reverseArr.toString().replace(/,/g, "");
+  const replaced = str.replace(/[0-9]/g, "_");
+  let newArr = [];
+
+  for (let i = 0; i < replaced.length; i++) {
+    newArr.push(replaced[i] + arr[i]);
+  }
+  return newArr;
+}
+reverseArrayAndSubstitute([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function array_element_replace(arr, old_value, new_value) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === old_value) {
+      arr[i] = new_value;
+    }
+  }
+  return arr;
+}
+num = [1, 2, 3, 2, 2, 8, 1, 9];
+console.log(`Original Array: ${num}`);
+console.log(array_element_replace(num, 2, 5));
