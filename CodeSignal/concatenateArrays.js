@@ -8,6 +8,7 @@
 // solution(a, b) = [2, 2, 1, 10, 11].
 
 function solution(a, b) {
+  // Solution without built-in methods
   let newArr = [];
   for (let i = 0; i < a.length; i++) {
     newArr.push(a[i]);
@@ -17,8 +18,11 @@ function solution(a, b) {
   }
   return newArr;
 
-  // return [...a, ...b];
-  // return a.concat(b);
+  // Solution with spread operator
+  return [...a, ...b];
+
+  // Solution with .concat method
+  return a.concat(b);
 }
 solution([2, 2, 1], [10, 11]); // expects [2, 2, 1, 10, 11]
 solution([1, 2], [3, 1, 2]); // expects [1, 2, 3, 1, 2]
