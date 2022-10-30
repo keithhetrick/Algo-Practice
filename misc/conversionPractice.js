@@ -60,11 +60,11 @@ function convertToStringReverseArrayAndConvertToNumber(n) {
   let reverse = n.toString().replace(/,/g, "").split("").reverse().join("");
   for (let i = 0; i < reverse.length; i++) {
     // Few ways to convert string to number
-    arr.push(Number(reverse[i]));
-    arr.push(parseInt(reverse[i]));
-    arr.push(+reverse[i]);
-    arr.push(~~reverse[i]);
-    arr.push(parseFloat(reverse[i]));
+    // arr.push(Number(reverse[i]));
+    // arr.push(parseInt(reverse[i]));
+    // arr.push(+reverse[i]);
+    // arr.push(~~reverse[i]);
+    // arr.push(parseFloat(reverse[i]));
   }
   return arr;
 }
@@ -98,3 +98,47 @@ function generateRandomNumbersAndSum(n) {
   return sum;
 }
 generateRandomNumbersAndSum(15);
+
+function convertArrayToStringAndBackToArray(arr) {
+  let newArr = [];
+  let result = arr.toString().split(",");
+
+  for (let i = 0; i < result.length; i++) newArr.push(+result[i]);
+  return newArr;
+}
+convertArrayToStringAndBackToArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function convertArrayToStringReverseAndBackToArray(arr) {
+  let newArr = [];
+  let result = arr.toString().split(",").reverse();
+
+  for (let i = 0; i < result.length; i++) newArr.push(+result[i]);
+  return newArr;
+}
+convertArrayToStringReverseAndBackToArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function reverseArray(arr) {
+  let newArr = [];
+
+  for (let i = arr.length - 1; i >= 0; i--) newArr.push(arr[i]);
+  return newArr;
+}
+reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function reverseArrayAndConcat(arr) {
+  let reverseArr = [];
+
+  for (let i = arr.length - 1; i >= 0; i--) reverseArr.push(arr[i]);
+  return arr.concat(reverseArr);
+}
+reverseArrayAndConcat([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function reverseArrayAndMultiplySumIndexes(arr) {
+  let reverseArr = arr.reverse();
+  let sum = 0;
+
+  for (let i = 0; i < reverseArr.length; i++)
+    sum += reverseArr[i] * reverseArr[i];
+  return sum;
+}
+reverseArrayAndMultiplySumIndexes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
