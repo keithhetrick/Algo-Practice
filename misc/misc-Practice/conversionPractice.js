@@ -169,7 +169,6 @@ console.log(`Original Array: ${num}`);
 console.log(array_element_replace(num, 2, 5));
 
 function reverseString(str) {
-  let rev = str.reverse();
-  return rev;
+  return str.split("").reverse().join("");
 }
 reverseString("aeiou");
