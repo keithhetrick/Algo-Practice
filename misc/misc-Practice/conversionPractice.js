@@ -167,3 +167,9 @@ function array_element_replace(arr, old_value, new_value) {
 num = [1, 2, 3, 2, 2, 8, 1, 9];
 console.log(`Original Array: ${num}`);
 console.log(array_element_replace(num, 2, 5));
+
+function reverseString(str) {
+  let rev = str.reverse();
+  return rev;
+}
+reverseString("aeiou");
