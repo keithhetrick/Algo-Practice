@@ -27,22 +27,31 @@
 // Constraints
 // All input times are valid
 
+// Solution 1
 function timeConversion(s) {
   let lastTwo = s.substring(8);
   let fullTime = s.substring(0, 8);
   let times = fullTime.split(":");
 
   if (lastTwo === "PM") {
-    if (times[0] !== "12") {
-      times[0] = parseInt(times[0]) + 12;
-    }
-  } else {
-    if (times[0] === "12") {
-      times[0] = "00";
-    }
-  }
+    if (times[0] !== "12") times[0] = parseInt(times[0]) + 12;
+  } else if (times[0] === "12") times[0] = "00";
 
-  console.log(times.join(":"));
   return times.join(":");
 }
-timeConversion("07:05:45PM");
+timeConversion("07:05:45PM"); // expects 19:05:45
+
+// Solution 2
+function timeConversion(s) {
+  let time = s.split(":");
+  let hour = time[0];
+  let min = time[1];
+  let sec = time[2].slice(0, 2);
+  let ampm = time[2].slice(2, 4);
+
+  if (ampm === "PM" && hour !== "12") hour = Number(hour) + 12;
+  if (ampm === "AM" && hour === "12") hour = "00";
+
+  return `${hour}:${min}:${sec}`;
+}
+timeConversion("07:05:45PM"); // expects 19:05:45
