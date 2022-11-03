@@ -26,30 +26,25 @@
 // Print two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. (The output can be greater than a 32 bit integer.)
 
 // Solution 1
-
 function miniMaxSum(arr) {
   let min = arr[0];
   let max = arr[0];
   let sum = 0;
-  let minSum = 0;
-  let maxSum = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (max < arr[i]) {
-      max = arr[i];
-    } else if (min > arr[i]) {
-      min = arr[i];
-    }
+    if (max < arr[i]) max = arr[i];
+    if (min > arr[i]) min = arr[i];
+
     sum += arr[i];
   }
-  maxSum = sum - min;
-  minSum = sum - max;
+  let maxSum = sum - min;
+  let minSum = sum - max;
   console.log(minSum, maxSum);
 }
-miniMaxSum([1, 2, 3, 4, 5]);
+miniMaxSum([1, 2, 3, 4, 5]); // expects 10, 14
+miniMaxSum([7, 69, 2, 221, 8974]); // expects 299, 9271
 
 // Solution 2
-
 function miniMaxSum(arr) {
   // let newArr = [...arr].sort();
   let newArr = arr.sort();
@@ -63,3 +58,4 @@ function miniMaxSum(arr) {
   console.log(min, max);
 }
 miniMaxSum([1, 2, 3, 4, 5]);
+miniMaxSum([7, 69, 2, 221, 8974]); // expects 299, 9271
