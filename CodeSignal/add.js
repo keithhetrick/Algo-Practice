@@ -1,4 +1,4 @@
-// Add
+// 1. Add
 
 // Write a function that returns the sum of two numbers.
 
