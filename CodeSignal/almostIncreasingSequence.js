@@ -1,4 +1,4 @@
-// Almost Increasing Sequence
+// 7. Almost Increasing Sequence
 // https://app.codesignal.com/arcade/intro/level-2/2mxbGwLzvkTCKAJMG
 
 function solution(sequence) {
