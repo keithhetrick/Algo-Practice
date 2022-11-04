@@ -1,4 +1,4 @@
-// Adjacent Elements Product
+// 4. Adjacent Elements Product
 // https://app.codesignal.com/arcade/intro/level-2/xzKiBHjhoinnpdh6m
 
 // Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
