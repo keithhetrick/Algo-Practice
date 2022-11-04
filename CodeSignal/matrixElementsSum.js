@@ -1,5 +1,5 @@
-//  Matrix Element Sum
-//  https://app.codesignal.com/arcade/intro/level-2/xskq4ZxLyqQMCLshr
+// 8. Matrix Element Sum
+// https://app.codesignal.com/arcade/intro/level-2/xskq4ZxLyqQMCLshr
 
 function solution(matrix) {
   let sum = 0;
