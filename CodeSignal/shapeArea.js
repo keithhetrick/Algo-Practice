@@ -1,4 +1,4 @@
-// Shape Area
+// 5. Shape Area
 // https://app.codesignal.com/arcade/intro/level-2/yuGuHvcCaFCKk56rJ
 
 function solution(n) {
