@@ -1,4 +1,4 @@
-//  Check Palindrome
+// 3. Check Palindrome
 
 // Given the string, check if it is a palindrome.
 
