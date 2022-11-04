@@ -1,4 +1,4 @@
-//  Common Character Count
+// 10. Common Character Count
 // https://app.codesignal.com/arcade/intro/level-3/JKKuHJknZNj4YGL32
 
 function commonCharacterCount(s1, s2) {
