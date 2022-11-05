@@ -20,42 +20,23 @@
 
 function solution(s) {
   let count = 0;
+
   for (let i = 1; i < s.length - 1; i++) {
     for (let j = i + 1; j < s.length; j++) {
       let a = s.slice(0, i);
       let b = s.slice(i, j);
       let c = s.slice(j);
-      if (a + b !== b + c && b + c !== c + a && c + a !== a + b) {
-        count++;
-      }
+      if (a + b !== b + c && b + c !== c + a && c + a !== a + b) count++;
     }
   }
   return count;
-
-  // let count = 0;
-  // let a = "";
-  // for (let i = 0; i < s.length - 2; i++) {
-  //   a += s[i];
-  //   let b = "";
-  //   for (let j = i + 1; j < s.length - 1; j++) {
-  //     b += s[j];
-  //     let c = "";
-  //     for (let k = j + 1; k < s.length; k++) {
-  //       c += s[k];
-  //       if (a + b !== b + c && b + c !== c + a && c + a !== a + b) {
-  //         count++;
-  //       }
-  //     }
-  //   }
-  // }
-  // return count;
 }
-solution("xzxzx"); // expected output: 5
-solution("xzy"); // expected output: 1
-solution("xxx"); // expected output: 0
-solution("xzxzxzxzxz"); // expected output: 30
-solution("xxxxxxxxxx"); // expected output: 24
-solution("xyzxyzxyzx"); // expected output: 35
-solution("xzxzxxzzxx"); // expected output: 36
-solution("gggggggggggggggggggggggggggggg"); // expected output: 366
-solution("gfgfgfgfgfgfgfgfgfgfgfgfgfgfgf"); // expected output: 387
+solution("xzxzx"); // expects 5
+solution("xzy"); // expects 1
+solution("xxx"); // expects 0
+solution("xzxzxzxzxz"); // expects 30
+solution("xxxxxxxxxx"); // expects 24
+solution("xyzxyzxyzx"); // expects 35
+solution("xzxzxxzzxx"); // expects 36
+solution("gggggggggggggggggggggggggggggg"); // expects 366
+solution("gfgfgfgfgfgfgfgfgfgfgfgfgfgfgf"); // expects 387

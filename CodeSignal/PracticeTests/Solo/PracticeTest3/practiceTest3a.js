@@ -14,35 +14,31 @@
 
 function solution(numbers, left, right) {
   let map = {};
+  let result = [];
 
   for (let i = left; i <= right; i++) {
     map[i] = true;
   }
-  let result = [];
-  for (let i = 0; i < numbers.length; i++) {
-    let num = numbers[i];
-    let x = num / (i + 1);
-    if (map[x]) {
-      result.push(true);
-    } else {
-      result.push(false);
-    }
+  for (let j = 0; j < numbers.length; j++) {
+    let num = numbers[j] / (j + 1);
+    if (map[num]) result.push(true);
+    else result.push(false);
   }
   return result;
 }
-solution([8, 5, 6, 16, 5], 1, 3); // expected output: [false, false, true, false, true]
-solution([100], 1, 100); // expected output: [true]
-solution([1, 2, 3, 4, 5], 1, 5); // expected output: [true, true, true, true, true]
-solution([1, 2, 3, 4, 5], 2, 10000); // expected output: [false, false, false, false, false]
-solution([1000000, 20000], 10000, 10000); // expected output: [false, true]
-solution([65, 46, 60, 164, 243, 228, 231, 298, 231, 211], 20, 50); // expected output: [false, true, true, true, false, true, true, false, false, false]
-solution([643, 531, 504, 224, 415, 360, 364, 84, 212, 587], 70, 80); // expected output: [false, false, false, false, false, false, false, false, false, false]
-// solution(
-// //   [
-// //     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-// //     22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-// //     41, 42, 43, 44, 45, 46, 47, 48, 49,
-// //   ],
-// //   1,
-// //   10000
-// // ); // expects [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
+solution([8, 5, 6, 16, 5], 1, 3); // expects [false, false, true, false, true]
+solution([100], 1, 100); // expects [true]
+solution([1, 2, 3, 4, 5], 1, 5); // expects [true, true, true, true, true]
+solution([1, 2, 3, 4, 5], 2, 10000); // expects [false, false, false, false, false]
+solution([1000000, 20000], 10000, 10000); // expects [false, true]
+solution([65, 46, 60, 164, 243, 228, 231, 298, 231, 211], 20, 50); // expects [false, true, true, true, false, true, true, false, false, false]
+solution([643, 531, 504, 224, 415, 360, 364, 84, 212, 587], 70, 80); // expects [false, false, false, false, false, false, false, false, false, false]
+solution(
+  [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49,
+  ],
+  1,
+  10000
+); // expects [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
