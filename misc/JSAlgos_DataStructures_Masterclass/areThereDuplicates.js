@@ -15,9 +15,9 @@ function areThereDuplicates(...args) {
   }
   return false;
 }
-areThereDuplicates(1, 2, 3); // false
-areThereDuplicates(1, 2, 2); // true
-areThereDuplicates("a", "b", "c", "a"); // true
+areThereDuplicates(1, 2, 3); // expects false
+areThereDuplicates(1, 2, 2); // expects true
+areThereDuplicates("a", "b", "c", "a"); // expects true
 
 // Two Pointers
 function areThereDuplicates(...args) {
@@ -32,14 +32,14 @@ function areThereDuplicates(...args) {
   }
   return false;
 }
-areThereDuplicates(1, 2, 3); // false
-areThereDuplicates(1, 2, 2); // true
-areThereDuplicates("a", "b", "c", "a"); // true
+areThereDuplicates(1, 2, 3); // expects false
+areThereDuplicates(1, 2, 2); // expects true
+areThereDuplicates("a", "b", "c", "a"); // expects true
 
 // One Liner
 function areThereDuplicates(...args) {
   return new Set(args).size !== args.length;
 }
-areThereDuplicates(1, 2, 3); // false
-areThereDuplicates(1, 2, 2); // true
-areThereDuplicates("a", "b", "c", "a"); // true
+areThereDuplicates(1, 2, 3); // expects false
+areThereDuplicates(1, 2, 2); // expects true
+areThereDuplicates("a", "b", "c", "a"); // expects true
