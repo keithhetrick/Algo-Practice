@@ -9,7 +9,7 @@ function truncateString(str, num) {
     return newStr + "...";
   } else return str;
 
-  // One Liner Solution
+  // One-Liner Solution
   return str.length > num ? str.slice(0, num) + "..." : str;
 }
 truncateString("A-tisket a-tasket A green and yellow basket", 8); // expects A-tisket...
