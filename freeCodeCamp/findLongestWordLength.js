@@ -9,4 +9,12 @@ function findLongestWordLength(str) {
   }
   return longestWord;
 }
-findLongestWordLength("The quick brown fox jumped over the lazy dog");
+findLongestWordLength("The quick brown fox jumped over the lazy dog"); // expects 6
+findLongestWordLength("May the force be with you"); // expects 5
+findLongestWordLength("Google do a barrel roll"); // expects 6
+findLongestWordLength(
+  "What is the average airspeed velocity of an unladen swallow"
+); // expects 8
+findLongestWordLength(
+  "What if we try a super-long word such as otorhinolaryngology"
+); // expects 19
