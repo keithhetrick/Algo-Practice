@@ -1,22 +1,15 @@
 // Diagonal Difference
+// https://www.hackerrank.com/challenges/diagonal-difference/problem
 
 function diagonalDifference(arr) {
-  let leftToRight = 0;
-  let rightToLeft = 0;
-  let x = arr.length - 1;
+  let sum1 = 0;
+  let sum2 = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    leftToRight += arr[i][i];
+    sum1 += arr[i][i];
+    sum2 += arr[i][arr.length - 1 - i];
   }
-
-  for (let i = 0; i < arr.length; i++) {
-    rightToLeft += arr[i][x];
-    x = x - 1;
-  }
-
-  let difference = Math.abs(leftToRight - rightToLeft);
-  console.log(difference);
-  return difference;
+  return Math.abs(sum1 - sum2);
 }
 
 diagonalDifference([
