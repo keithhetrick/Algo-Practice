@@ -28,13 +28,9 @@ console.log(binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 15));
 
 function factorial(num) {
   // setting base case
-  if (num === 1) {
-    return num;
-  }
+  if (num === 1) return num;
   // set recursive case
-  else {
-    return num * factorial(num - 1);
-  }
+  else return num * factorial(num - 1);
 }
 factorial(4);
 

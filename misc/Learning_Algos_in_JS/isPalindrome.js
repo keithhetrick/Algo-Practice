@@ -1,9 +1,9 @@
 function isPalindrome(str) {
   str = str.toLowerCase();
-  var charactersArr = str.split("");
-  var validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
+  let charactersArr = str.split("");
+  let validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
 
-  var lettersArr = [];
+  let lettersArr = [];
   charactersArr.forEach((char) => {
     if (validCharacters.indexOf(char) > -1) lettersArr.push(char);
   });
