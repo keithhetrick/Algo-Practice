@@ -1,4 +1,4 @@
-// Comfortable Numbers
+// 47. Comfortable Numbers
 // https://app.codesignal.com/arcade/code-arcade/labyrinth-of-nested-loops/pNfGgNk46YZ4c4RW5
 
 function solution(l, r) {
