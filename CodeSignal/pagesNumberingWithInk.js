@@ -1,4 +1,4 @@
-// Pages Numbering With Ink
+// 46. Pages Numbering With Ink
 // https://app.codesignal.com/arcade/code-arcade/at-the-crossroads/m9wjpkCjgofg7gs8N
 
 function solution(current, numberOfDigits) {
