@@ -26,9 +26,11 @@ function solution(l, r) {
 
   for (let i = l; i < r; i++) {
     for (let j = i + 1; j <= r; j++) {
+      // ("" + i) is the same as i.toString()
       let sum = ("" + i).split("").reduce((a, b) => a + Number(b), 0);
 
       if (j >= i - sum && j <= i + sum) {
+        // ("" + j) is the same as j.toString()
         sum = ("" + j).split("").reduce((a, b) => a + Number(b), 0);
         if (i >= j - sum && i <= j + sum) count++;
       }
