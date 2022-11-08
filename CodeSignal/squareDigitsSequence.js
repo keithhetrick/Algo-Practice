@@ -1,16 +1,17 @@
-// Square Digits Sequence
+// 45. Square Digits Sequence
 // https://app.codesignal.com/arcade/code-arcade/labyrinth-of-nested-loops/5vXzdE9yzjsoMZ9sk
 
 function solution(a0) {
   let a = a0;
   let count = 1;
   let seen = new Set();
+
   while (!seen.has(a)) {
     seen.add(a);
     a = a
       .toString()
       .split("")
-      .reduce((acc, cur) => acc + cur * cur, 0);
+      .reduce((a, b) => a + b * b, 0);
     count++;
   }
   return count;
