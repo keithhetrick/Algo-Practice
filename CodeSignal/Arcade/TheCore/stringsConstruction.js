@@ -4,6 +4,7 @@
 function solution(a, b) {
   let hashmapA = {};
   let hashmapB = {};
+
   for (let i = 0; i < a.length; i++) {
     let letter = a[i];
     hashmapA[letter] ? hashmapA[letter]++ : (hashmapA[letter] = 1);
@@ -12,8 +13,8 @@ function solution(a, b) {
     let letter = b[i];
     hashmapB[letter] ? hashmapB[letter]++ : (hashmapB[letter] = 1);
   }
-
   let total = Infinity;
+
   for (let key in hashmapA) {
     if (!hashmapB[key]) {
       total = 0;
