@@ -1,4 +1,4 @@
-// Strings Construction
+// 59. Strings Construction
 // https://app.codesignal.com/arcade/code-arcade/mirror-lake/chW9F8bCgxYJBcgj3
 
 function solution(a, b) {
