@@ -2,7 +2,10 @@
 // https://app.codesignal.com/arcade/code-arcade/loop-tunnel/xzeZqCQjpfDJuN72S
 
 function solution(param1, param2) {
-  // Solution using While Loop
+  let result = 0;
+  let num = 1;
+
+  // Solution using while loop
   while (param1 > 0 || param2 > 0) {
     let sum = (param1 % 10) + (param2 % 10);
     result += (sum % 10) * num;
@@ -12,7 +15,7 @@ function solution(param1, param2) {
   }
   return result;
 
-  // Solution using For Loop
+  // Solution using for loop
   for (let i = 0; i < 10; i++) {
     let sum = (param1 % 10) + (param2 % 10);
     result += (sum % 10) * num;
@@ -20,7 +23,6 @@ function solution(param1, param2) {
     param2 = Math.floor(param2 / 10);
     num *= 10;
   }
-  console.log(result);
   return result;
 }
 solution(456, 1734); // expects 1180
