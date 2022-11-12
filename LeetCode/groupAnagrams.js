@@ -11,9 +11,7 @@ function groupAnagrams(strs) {
     const word = strs[i];
     const key = word.split("").sort().join("");
 
-    if (!grouped[key]) {
-      grouped[key] = [];
-    }
+    if (!grouped[key]) grouped[key] = [];
 
     grouped[key].push(word);
   }

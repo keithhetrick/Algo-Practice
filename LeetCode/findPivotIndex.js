@@ -16,9 +16,8 @@ const pivotIndex = (nums) => {
     sum += nums[i];
   }
   for (let j = 0; j < nums.length; j++) {
-    if (leftSum === sum - leftSum - nums[j]) {
-      return j;
-    }
+    if (leftSum === sum - leftSum - nums[j]) return j;
+
     leftSum += nums[j];
   }
   return -1;

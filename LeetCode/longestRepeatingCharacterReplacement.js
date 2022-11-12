@@ -37,7 +37,7 @@ function characterReplacement(s, k) {
     }
     right++;
   }
-  console.log(right - left);
+
   return right - left;
 }
 characterReplacement("AABABBA", 1); // expects 4
