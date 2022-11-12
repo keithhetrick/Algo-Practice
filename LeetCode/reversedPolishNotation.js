@@ -9,14 +9,13 @@ function rpn(tokens) {
     "*": (a, b) => a * b,
     "/": (a, b) => parseInt(a / b),
   };
+
   for (let token of tokens) {
     if (token in operators) {
       let b = stack.pop();
       let a = stack.pop();
       stack.push(operators[token](a, b));
-    } else {
-      stack.push(parseInt(token));
-    }
+    } else stack.push(parseInt(token));
   }
   return stack.pop();
 }

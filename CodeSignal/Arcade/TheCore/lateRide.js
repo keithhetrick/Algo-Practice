@@ -35,9 +35,8 @@ function solution(n) {
   let splitNums = Array.from(String(totalTime), Number);
   let sum = 0;
 
-  for (let i = 0; i < splitNums.length; i++) {
-    sum += splitNums[i];
-  }
+  for (let i = 0; i < splitNums.length; i++) sum += splitNums[i];
+
   return sum;
 }
 solution(240); // expects 4

@@ -25,6 +25,11 @@
 // s consists only of printable ASCII characters.
 
 function isPalindrome(s) {
+  let str = s.replace(/[^a-zA-Z0-9]+/g, "").toLowerCase();
+  let reverse = str.split("").reverse().join("");
+  console.log(str === reverse);
+  return str === reverse;
+
   // Sanitize input string
   s = s.toLowerCase().replace(/[\W_]/g, "");
 
@@ -35,9 +40,7 @@ function isPalindrome(s) {
   // While Left less than Right
   while (left < right) {
     // If chars at Left & Right Pointer are not equal, return false
-    if (s[left] !== s[right]) {
-      return false;
-    }
+    if (s[left] !== s[right]) return false;
 
     // move left & right indices by one, in each direction
     left++;
@@ -46,5 +49,15 @@ function isPalindrome(s) {
 
   // Return true
   return true;
+
+  // Pointer Method
+  let x = s.replace(/[^a-zA-Z0-9]+/g, "").toLowerCase();
+  let j = x.length - 1;
+  let i = 0;
+  while (i <= j) {
+    if (x[i] != x[j]) return false;
+    i++;
+    j--;
+  }
 }
 isPalindrome();
