@@ -30,9 +30,9 @@ function solution(a) {
     }
   }
 
-  console.log("Perfomance: ", performance.now());
+  console.log("Perfomance: ", performance.now(), "ms");
   console.log("a: ", a);
-  return console.log("Time (in milliseconds): ", Date.now() - start);
+  return console.log("Time elapsed: ", Date.now() - start, "ms");
 }
 
 solution([1, 1, 1, 1, 1]); // expects [0,1,0,1,0]
