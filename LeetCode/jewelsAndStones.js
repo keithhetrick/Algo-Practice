@@ -61,6 +61,22 @@ var numJewelsInStones = function (jewels, stones) {
   }
   console.log(count);
   return count;
+
+  // Solution using pointers
+  let count = 0;
+  let i = 0;
+  let j = 0;
+  while (i < stones.length) {
+    if (stones[i] === jewels[j]) {
+      count++;
+      j++;
+    } else {
+      i++;
+      j = 0;
+    }
+  }
+  console.log(count);
+  return count;
 };
 numJewelsInStones("aA", "aAAbbbb"); // expects 3
 numJewelsInStones("z", "ZZ"); // expects 0
