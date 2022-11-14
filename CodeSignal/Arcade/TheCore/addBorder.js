@@ -16,25 +16,7 @@ function solution(picture) {
   pictureFrame.push(length);
   return pictureFrame;
 
-  // Solution 2
-  let a = picture.length;
-  let b = picture[0].length;
-  let c = "*".repeat(b + 2);
-  let d = picture.map((x) => "*" + x + "*");
-  d.unshift(c);
-  d.push(c);
-  console.log(d);
-  return console.log(d);
-
-  // Solution 3
-  let length = "*".repeat(picture[0].length + 2);
-  let pictureFrame = picture.map((x) => "*" + x + "*");
-  pictureFrame.unshift(length);
-  pictureFrame.push(length);
-  console.log(pictureFrame);
-  return pictureFrame;
-
-  // Solution 4 using hash
+  // Solution using hash
   let hash = {};
   let length = "*".repeat(picture[0].length + 2);
   let pictureFrame = picture.map((x) => "*" + x + "*");
@@ -45,8 +27,25 @@ function solution(picture) {
   }
   console.log(hash);
   return hash;
-}
 
+  // Solution 3
+  let a = picture.length;
+  let b = picture[0].length;
+  let c = "*".repeat(b + 2);
+  let d = picture.map((x) => "*" + x + "*");
+  d.unshift(c);
+  d.push(c);
+  console.log(d);
+  return console.log(d);
+
+  // Solution 4
+  let length = "*".repeat(picture[0].length + 2);
+  let pictureFrame = picture.map((x) => "*" + x + "*");
+  pictureFrame.unshift(length);
+  pictureFrame.push(length);
+  console.log(pictureFrame);
+  return pictureFrame;
+}
 solution(["abc", "ded"]); // expects ["*****", "*abc*", "*ded*", "*****"]
 solution(["a"]); // expects ["***", "*a*", "***"]
 solution(["aa", "**", "zz"]); // expects ["****", "*aa*", "****", "*zz*", "****"]
