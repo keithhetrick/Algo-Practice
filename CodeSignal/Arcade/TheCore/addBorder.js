@@ -36,7 +36,7 @@ function solution(picture) {
   d.unshift(c);
   d.push(c);
   console.log(d);
-  return console.log(d);
+  return d;
 
   // Solution 4
   let length = "*".repeat(picture[0].length + 2);
