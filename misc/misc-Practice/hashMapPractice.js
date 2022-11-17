@@ -104,15 +104,15 @@ function reassignKeys(hash) {
 reassignKeys({ a: 1, b: 2 }); // {0: 1, 1: 2} // {a: 1, b: 2} => {0: 1, 1: 2}
 reassignKeys({ a: 1, b: 2, c: 3 }); // {0: 1, 1: 2, 2: 3} // {a: 1, b: 2, c: 3} => {0: 1, 1: 2, 2: 3}
 
-function reassignKeysFromDifferentHash(hash1, hash2) {
+function createHashAndReassignKeysToDifferentHash(hash1, hash2) {
   let newHash = {};
   let keys = Object.keys(hash1);
+  console.log(hash1);
   for (let i = 0; i < keys.length; i++) {
     let key = keys[i];
-    newHash[i] = hash2[key];
+    newHash[hash2[key]] = hash1[key];
   }
   console.log("Reassigned: ", newHash);
   return newHash;
 }
-reassignKeysFromDifferentHash({ a: 1, b: 2 }, { 1: "a", 2: "b" }); // {0: "a", 1: "b"} // {a: 1, b: 2} => {0: "a", 1: "b"}
-reassignKeysFromDifferentHash({ a: 1, b: 2, c: 3 }, { 1: "a", 2: "b", 3: "c" }); // {0: "a", 1: "b", 2: "c"} // {a: 1, b: 2, c: 3} => {0: "a", 1: "b", 2: "c"}
+createHashAndReassignKeysToDifferentHash({ a: 1, b: 2 }, { a: 1, b: 2 }); // {1: 1, 2: 2} // {a: 1, b: 2} => {1: 1, 2: 2}
