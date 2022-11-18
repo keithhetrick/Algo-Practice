@@ -137,3 +137,22 @@ createHashAndUseTheValueForTheKeyInSecondMapAndTheKeyForTheValueInFirstMap(
   { a: 1, b: 2 },
   { a: 1, b: 2 }
 ); // expects {a: 1, b: 2} => {1: a, 2: b}
+
+function createHashAndUseTheValueForTheKeyInSecondMapAndTheKeyForTheValueInFirstMap(
+  hash1,
+  hash2
+) {
+  let newHash = {};
+  let keys = Object.keys(hash1);
+  console.log(hash1);
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    newHash[hash2[key]] = key;
+  }
+  console.log("Reassigned Key/Value pair: ", newHash);
+  return newHash;
+}
+createHashAndUseTheValueForTheKeyInSecondMapAndTheKeyForTheValueInFirstMap(
+  { a: 1, b: 2 },
+  { a: 1, b: 2 }
+); // expects {a: 1, b: 2} => {1: a, 2: b}
