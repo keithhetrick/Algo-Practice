@@ -83,7 +83,7 @@ myLinkedList.prepend(1);
 myLinkedList.insert(2, 99);
 myLinkedList.insert(20, 88);
 myLinkedList.remove(2);
-console.log(myLinkedList.printList());
+console.log("Linked List: ", myLinkedList.printList());
 
 // create a hash map
 
@@ -139,64 +139,20 @@ myHashTable.set("apples", 9);
 myHashTable.set("oranges", 2);
 myHashTable.set("bananas", 3);
 
-console.log(myHashTable.get("grapes"));
-console.log(myHashTable.get("apples"));
-console.log(myHashTable.get("oranges"));
-console.log(myHashTable.get("bananas"));
+console.log("Table Item #: ", myHashTable.get("grapes"));
+console.log("Table Item #: ", myHashTable.get("apples"));
 
-console.log(myHashTable.keys());
+console.log(
+  "Table Item #: ",
+  myHashTable.get("oranges"),
+  "+",
+  myHashTable.get(2)
+);
+console.log(
+  "Table Item #: ",
+  myHashTable.get("bananas"),
+  "+",
+  myHashTable.get(3)
+);
 
-// create a hashed linked list
-
-class HashTable {
-  constructor(size) {
-    this.data = new Array(size);
-  }
-
-  _hash(key) {
-    let hash = 0;
-    for (let i = 0; i < key.length; i++) {
-      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
-    }
-    return hash;
-  }
-
-  set(key, value) {
-    let address = this._hash(key);
-    if (!this.data[address]) {
-      this.data[address] = [];
-    }
-    this.data[address].push([key, value]);
-    return this.data;
-  }
-
-  get(key) {
-    let address = this._hash(key);
-    const currentBucket = this.data[address];
-    if (currentBucket) {
-      for (let i = 0; i < currentBucket.length; i++) {
-        if (currentBucket[i][0] === key) {
-          return currentBucket[i][1];
-        }
-      }
-    }
-    return undefined;
-  }
-
-  keys() {
-    const keysArray = [];
-    for (let i = 0; i < this.data.length; i++) {
-      if (this.data[i]) {
-        keysArray.push(this.data[i][0][0]);
-      }
-    }
-    return keysArray;
-  }
-}
-
-const myHashTable = new HashTable(50);
-myHashTable.set("grapes", 10000);
-myHashTable.set("apples", 9);
-
-console.log(myHashTable.get("grapes"));
-console.log(myHashTable.get("apples"));
+console.log("Hash Table: ", myHashTable.keys());
