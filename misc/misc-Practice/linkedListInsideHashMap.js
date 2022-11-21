@@ -154,20 +154,20 @@ for (let i = 0; i < myHashTable.data.length; i++) {
   }
 }
 
-// switch out key value pairs in above hash table
+// // switch out key value pairs in above hash table
 
-for (let i = 0; i < myHashTable.data.length; i++) {
-  if (myHashTable.data[i]) {
-    myHashTable.data[i][0][1] = "LOLOL new value here";
-  }
-}
+// for (let i = 0; i < myHashTable.data.length; i++) {
+//   if (myHashTable.data[i]) {
+//     myHashTable.data[i][0][1] = "LOLOL new value here";
+//   }
+// }
 
-console.log("Hash Table: ", myHashTable.keys());
+// console.log("Hash Table: ", myHashTable.keys());
 
-// print out values in above hash table
+// // print out values in above hash table
 
-for (let i = 0; i < myHashTable.data.length; i++) {
-  if (myHashTable.data[i]) {
-    console.log("After key/value pair switch: ", myHashTable.data[i]);
-  }
-}
+// for (let i = 0; i < myHashTable.data.length; i++) {
+//   if (myHashTable.data[i]) {
+//     console.log("After key/value pair switch: ", myHashTable.data[i]);
+//   }
+// }
