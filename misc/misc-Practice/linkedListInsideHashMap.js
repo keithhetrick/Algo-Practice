@@ -141,18 +141,33 @@ myHashTable.set("bananas", 3);
 
 console.log("Table Item #: ", myHashTable.get("grapes"));
 console.log("Table Item #: ", myHashTable.get("apples"));
-
-console.log(
-  "Table Item #: ",
-  myHashTable.get("oranges"),
-  "+",
-  myHashTable.get(2)
-);
-console.log(
-  "Table Item #: ",
-  myHashTable.get("bananas"),
-  "+",
-  myHashTable.get(3)
-);
+console.log("Table Item #: ", myHashTable.get("oranges"));
+console.log("Table Item #: ", myHashTable.get("bananas"));
 
 console.log("Hash Table: ", myHashTable.keys());
+
+// print out values in above hash table
+
+for (let i = 0; i < myHashTable.data.length; i++) {
+  if (myHashTable.data[i]) {
+    console.log("Before key/value pair switch: ", myHashTable.data[i]);
+  }
+}
+
+// switch out key value pairs in above hash table
+
+for (let i = 0; i < myHashTable.data.length; i++) {
+  if (myHashTable.data[i]) {
+    myHashTable.data[i][0][1] = "LOLOL new value here";
+  }
+}
+
+console.log("Hash Table: ", myHashTable.keys());
+
+// print out values in above hash table
+
+for (let i = 0; i < myHashTable.data.length; i++) {
+  if (myHashTable.data[i]) {
+    console.log("After key/value pair switch: ", myHashTable.data[i]);
+  }
+}
