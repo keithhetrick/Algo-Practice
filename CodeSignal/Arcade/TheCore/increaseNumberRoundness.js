@@ -2,13 +2,31 @@
 // https://app.codesignal.com/arcade/code-arcade/loop-tunnel/KLbRMcWhaZi3dvYH5
 
 function solution(n) {
+  // Solution 1
   let str = n.toString();
   let count = 0;
   for (let i = str.length - 1; i >= 0; i--) {
     if (str[i] === "0") count++;
   }
-  console.log(str.slice(0, str.length - count).includes("0"));
   return str.slice(0, str.length - count).includes("0");
+
+  // Solution using regex
+  return n.toString().replace(/0+$/, "").includes("0");
+
+  // Solution using helper function
+  return removeTrailingZeros(n).includes("0");
+
+  function removeTrailingZeros(n) {
+    let str = n.toString();
+    let count = 0;
+    for (let i = str.length - 1; i >= 0; i--) {
+      if (str[i] === "0") count++;
+    }
+    return str.slice(0, str.length - count);
+  }
+
+  // Solution using one liner
+  return /0[1-9]/.test(n);
 }
 solution(902200100); // expects true
 solution(11000); // expects false
