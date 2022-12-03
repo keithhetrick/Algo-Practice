@@ -1,0 +1,63 @@
+// 1742. Maximum Number of Balls in a Box
+// https://leetcode.com/problems/maximum-number-of-balls-in-a-box/
+
+var countBalls = function (lowLimit, highLimit) {
+  let boxMap = {};
+  let max = 0;
+
+  for (let i = lowLimit; i <= highLimit; i++) {
+    let sum = i.toString().split("");
+    // console.log(sum);
+    sum = sum.map((str) => {
+      return Number(str);
+    });
+    // console.log(sum);
+    sum = sum.reduce((a, b) => a + b);
+    // console.log("I:", i, "SUM:", sum);
+
+    if (!!boxMap[sum]) boxMap[sum]++;
+    else boxMap[sum] = 1;
+  }
+  // console.log("BOX MAP:", boxMap);
+
+  for (let key in boxMap) {
+    if (boxMap[key] > max) max = boxMap[key];
+  }
+  console.log("MAX:", max);
+  return max;
+
+  // solution 2
+  // let h = {};
+  // for (let i = lowLimit; i <= highLimit; i++) {
+  //   let ball = i.toString().split("");
+  //   let sum = 0;
+  //   for (let j = 0; j < ball.length; j++) {
+  //     sum += parseInt(ball[j]);
+  //   }
+  //   if (h[sum]) h[sum] += 1;
+  //   else h[sum] = 1;
+  // }
+  // let maxBall = -Infinity;
+  // for (let key in h) maxBall = Math.max(maxBall, h[key]);
+
+  return maxBall;
+
+  // solution 3
+  let hashmap = {};
+  for (let i = lowLimit; i <= highLimit; i++) {
+    let x = +String(i)
+      .split("")
+      .reduce((a, b) => Number(a) + Number(b));
+
+    if (hashmap[x]) hashmap[x]++;
+    else hashmap[x] = 1;
+  }
+  let max = -Infinity;
+  for (let key in hashmap) {
+    if (hashmap[key] > max) max = hashmap[key];
+  }
+  return max;
+};
+countBalls(1, 10);
+countBalls(5, 15);
+countBalls(19, 28);
