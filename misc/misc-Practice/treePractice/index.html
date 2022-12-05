@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tree Data Structure Practice</title>
+</head>
+
+<body id="container">
+    <h1>Tree Data Structure Visualization & Practice</h1>
+    <!-- make each point draggable -->
+    <div id="tree">
+        <div id="root" class="node" draggable="true">
+            <div class="node" draggable="true">
+                <div class="node" draggable="true"></div>
+                <div class="node" draggable="true"></div>
+            </div>
+            <div class="node" draggable="true">
+                <div class="node" draggable="true"></div>
+                <div class="node" draggable="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button id="addBtn">Add Node</button>
+        <button id="removeBtn">Remove Node</button>
+        <button id="clearBtn">Clear Tree</button>
+        <button id="searchBtn">Search</button>
+        <button id="randomBtn">Randomize</button>
+        <button id="sortBtn">Sort Nodes</button>
+        <button id="reverseBtn">Reverse</button>
+    </div>
+
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- render getTreeData in DOM -->
+    <div id="treeContainer">
+        <div id="tree"></div>
+    </div>
+
+    <script src="tree.js"></script>
+    <script type="module">
+        import { renderBinaryTree } from './tree.js';
+        const treeContainer = document.getElementById('treeContainer');
+        renderBinaryTree(treeContainer);
+
+        const tree = renderBinaryTree();
+        tree.add(5);
+        tree.add(3);
+        tree.add(1);
+        tree.add(4);
+        tree.add(8);
+        tree.add(6);
+        tree.add(10);
+
+        const root = tree.getRoot();
+        console.log("root is: ", root);
+    </script>
+
+
+    <!-- <script src="tree.js" defer></script> -->
+    <!-- <script src="treeNode.js"></script>
+    <script src="treePractice.js"></script> -->
+</body>
+
+</html>
