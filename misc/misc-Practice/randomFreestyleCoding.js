@@ -11,16 +11,16 @@ console.log("Outside loop: ", sentence);
 
 // matrix
 function pullLettersOut(matrix) {
-  // let str = matrix.toString().split(" ").join(" ");
-
-  // console.log(str);
   let newArr = [];
 
   for (let i = 0; i < matrix.length; i++) {
-    // console.log("i: ", matrix[i]);
-    // console.log("i: ", matrix[i][1]);
-    newArr.push(matrix[i][0]);
-    // console.log("i: ", matrix[i][1]);
+    // newArr.push(matrix[i][0]);
+    // console.log(matrix[i][0]);
+    console.log(matrix[i][i]);
+
+    if (matrix[i] % 2 !== 0) {
+      newArr.push(matrix[i][0]);
+    }
   }
   return console.log(newArr);
 }

@@ -27,17 +27,20 @@ function sumKey(nums) {
       hashmap[nums[i]] = 1;
     } else hashmap[nums[i]]++;
   }
+  console.log("Hash: ", hashmap);
 
   for (let key in hashmap) {
     if (hashmap[key] === 1) {
+      // console.log("key: ", key);
+      console.log(Object.entries(hashmap));
       sum += Number(key);
     }
   }
-  console.log("Perfomance: ", performance.now(), "ms");
-  console.log("Time elapsed: ", Date.now() - start, "ms");
+  // console.log("Perfomance: ", performance.now(), "ms");
+  // console.log("Time elapsed: ", Date.now() - start, "ms");
   console.log("sumKey: " + sum);
   return sum;
 }
 sumKey([1, 2, 3, 2]); // expects 4
-sumKey([1, 1, 1, 1, 1]); // expects 0
-sumKey([1, 2, 3, 4, 5]); // expects 15
+// sumKey([1, 1, 1, 1, 1]); // expects 0
+// sumKey([1, 2, 3, 4, 5]); // expects 15
