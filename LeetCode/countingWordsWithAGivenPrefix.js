@@ -2,6 +2,16 @@
 // https://leetcode.com/problems/counting-words-with-a-given-prefix/
 
 var prefixCount = function (words, pref) {
+  // Solution using for loop
+  let count = 0;
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].startsWith(pref)) {
+      count++;
+    }
+  }
+  console.log("count: ", count);
+  return count;
+
   // Solution using hashmap
   let hashmap = {};
   let count = 0;
@@ -17,16 +27,6 @@ var prefixCount = function (words, pref) {
       count += hashmap[key];
     }
   }
-  return count;
-
-  // Solution using for loop
-  let count = 0;
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].startsWith(pref)) {
-      count++;
-    }
-  }
-  console.log("count: ", count);
   return count;
 };
 prefixCount(["pay", "attention", "practice", "attend"], "at"); // expects 2
