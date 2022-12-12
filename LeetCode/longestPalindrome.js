@@ -33,8 +33,11 @@ function longestPalindrome(s) {
     expandAroundMiddle(i - 1, i + 1);
     expandAroundMiddle(i, i + 1);
   }
+  let result = s.slice(startIndex, startIndex + maxLength);
 
-  return s.slice(startIndex, startIndex + maxLength);
+  console.log(result);
+  return result;
 }
-
-longestPalindrome();
+longestPalindrome("cbbd"); // expects "bb"
+longestPalindrome("abba"); // expects "abba"
+longestPalindrome("a"); // expects "a"
