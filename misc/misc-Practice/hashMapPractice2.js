@@ -2,6 +2,18 @@
 
 const start = Date.now();
 
+function simpleMap(array) {
+  let newHash = {};
+  let keys = Object.keys(array);
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    newHash[array[key]] = key;
+  }
+  console.log("Reassigned Key/Value pair: ", newHash);
+  return newHash;
+}
+simpleMap([8, 1, 2, 2, 3]); // expects [4,0,1,1,3]
+
 // function makeHashMap(nums) {
 //   let hash = {};
 
@@ -32,7 +44,10 @@ function sumKey(nums) {
   for (let key in hashmap) {
     if (hashmap[key] === 1) {
       // console.log("key: ", key);
-      console.log(Object.entries(hashmap));
+      // console.log("Hashmap key/value pairs: ", Object.entries(hashmap));
+      console.log("Hashmap keys: ", Object.keys(hashmap));
+      console.log("Hashmap values: ", Object.values(hashmap));
+      // console.log("key: ", key);
       sum += Number(key);
     }
   }
