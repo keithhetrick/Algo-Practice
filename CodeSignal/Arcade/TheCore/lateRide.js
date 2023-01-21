@@ -37,6 +37,7 @@ function solution(n) {
 
   for (let i = 0; i < splitNums.length; i++) sum += splitNums[i];
 
+  console.log("\nSUM: ", sum, "\n");
   return sum;
 }
 solution(240); // expects 4
