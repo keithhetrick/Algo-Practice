@@ -4,10 +4,10 @@ let sentence = "Hey there ho there hi there!";
 
 function phrase() {
   let sentence = "LOL jk this is a diff phrase";
-  console.log("Inside loop:", sentence);
+  console.log("\nInside loop:", sentence, "\n");
 }
 phrase();
-console.log("Outside loop: ", sentence);
+console.log("\nOutside loop: ", sentence, "\n");
 
 // matrix
 function pullLettersOut(matrix) {
