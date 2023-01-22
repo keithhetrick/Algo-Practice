@@ -24,6 +24,7 @@ function pullLettersOut(matrix) {
   }
   return console.log(newArr);
 }
+
 pullLettersOut([
   [1, 2, 3, 4, 5],
   [6, 7, 8, 9],
