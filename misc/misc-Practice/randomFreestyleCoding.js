@@ -22,9 +22,8 @@ function pullLettersOut(matrix) {
       newArr.push(matrix[i][0]);
     }
   }
-  return console.log(newArr);
+  return console.log("\nNEW ARRAY: ", newArr, "\n");
 }
-
 pullLettersOut([
   [1, 2, 3, 4, 5],
   [6, 7, 8, 9],
