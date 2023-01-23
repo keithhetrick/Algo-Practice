@@ -40,7 +40,7 @@ function quadraticFormula(a, b, c) {
   let x = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
   let y = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
   let result = [x, y];
-  console.log("Result: ", result);
+  console.log("\nRESULT: ", result, "\n");
   return result;
 }
 quadraticFormula(1, 2, 3); // expects [-1, -3]
@@ -53,6 +53,7 @@ quadraticFormula(0, 0, 0); // expects ["infinite solutions"]
 
 console.log(100 * 365);
 
+/*
 // program to solve quadratic equation
 let root1, root2;
 
@@ -88,6 +89,7 @@ else {
 
   // result
   console.log(
-    `The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
+    `\nThe roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
   );
 }
+*/
