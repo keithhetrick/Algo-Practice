@@ -4,6 +4,14 @@
 // Given a rectangular matrix of characters, add a border of asterisks(*) to it.
 
 function solution(picture) {
+  // Solution 1
+  const width = picture[0].length + 2;
+  return [
+    "*".repeat(width),
+    ...picture.map((line) => `*${line}*`),
+    "*".repeat(width),
+  ];
+
   // Solution using for loop
   let pictureFrame = [];
   let length = "*".repeat(picture[0].length + 2);
@@ -28,7 +36,7 @@ function solution(picture) {
   console.log(hash);
   return hash;
 
-  // Solution 3
+  // Solution 4
   let a = picture.length;
   let b = picture[0].length;
   let c = "*".repeat(b + 2);
@@ -38,7 +46,7 @@ function solution(picture) {
   console.log(d);
   return d;
 
-  // Solution 4
+  // Solution 5
   let length = "*".repeat(picture[0].length + 2);
   let pictureFrame = picture.map((x) => "*" + x + "*");
   pictureFrame.unshift(length);
