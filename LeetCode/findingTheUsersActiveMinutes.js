@@ -2,8 +2,9 @@
 // https://leetcode.com/problems/finding-the-users-active-minutes/
 
 var findingUsersActiveMinutes = function (logs, k) {
-  // Solution 1
   let result = new Array(k).fill(0);
+
+  // Solution 1
   let logsMap = {};
 
   for (let i = 0; i < logs.length; i++) {
@@ -23,7 +24,6 @@ var findingUsersActiveMinutes = function (logs, k) {
   return result;
 
   // Solution 2
-  let result = new Array(k).fill(0);
   let map = new Map();
   for (let log of logs) {
     let [id, time] = log;
