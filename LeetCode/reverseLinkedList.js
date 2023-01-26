@@ -4,36 +4,19 @@
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
 const reverseList = (head) => {
-  // if (!head || !head.next) return head;
-  // let temp = reverseList(head.next);
-  // head.next.next = head;
-  // head.next = undefined;
-  // return temp;
-
-  if (head === null) return head;
-
-  let node = head;
   let prev = null;
+  let current = head;
+  let next = null;
 
-  while (node) {
-    let saveNext = node.next;
-    node.next = prev;
-    prev = node;
-    node = saveNext;
+  while (current) {
+    next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
   }
 
+  console.log("\nREVERSED LIST: ", prev);
   return prev;
-
-  // if (!head || !head.next) return head;
-  // let prev = null;
-
-  // while (head) {
-  //   nextNode = head.next;
-  //   head.next = prev;
-  //   prev = head;
-  //   head = nextNode;
-  // }
-  // return prev;
 };
 reverseList([1, 2, 3, 4, 5]); // expects [5,4,3,2,1]
 reverseList([1, 2]); // expects [2,1]
