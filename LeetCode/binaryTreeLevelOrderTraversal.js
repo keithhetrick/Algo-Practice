@@ -19,6 +19,7 @@ function levelOrder(root) {
     }
     result.push(level);
   }
+
   return result;
 }
 levelOrder([3, 9, 20, null, null, 15, 7]); // expects [[3],[9,20],[15,7]]
