@@ -28,18 +28,25 @@ pullLettersOut([
   [10, 11, 12, 13, 14],
 ]); // expects [1, 6, 10]
 
-function reverseThrougMatrix(matrix) {
-  let newArr = [];
+function reverseThrougMatrixInPlace(matrix) {
+  // for (let i = 0; i < matrix.length; i++) {
+  //   console.log("MATRIX[i][i]: ", matrix[i][i]);
+
+  //   if (matrix[i] % 2 !== 0) {
+  //     matrix[i].reverse();
+  //   }
+  // }
+
+  let newMatrix = [];
 
   for (let i = matrix.length - 1; i >= 0; i--) {
-    for (let j = matrix[i].length - 1; j >= 0; j--) {
-      newArr.push(matrix[i][j]);
-    }
+    newMatrix.push(matrix[i].reverse());
   }
-  return console.log("\nreverseThrougMatrix\tNEW ARRAY: ", newArr);
+
+  return console.log("\nreverseThrougMatrixInPlace\tNEW MATRIX: ", matrix);
 }
-reverseThrougMatrix([
+reverseThrougMatrixInPlace([
   [1, 2, 3, 4, 5],
   [6, 7, 8, 9],
   [10, 11, 12, 13, 14],
-]); // expects [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+]); // expects [[5, 4, 3, 2, 1], [9, 8, 7, 6], [14, 13, 12, 11, 10]]
