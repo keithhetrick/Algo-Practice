@@ -50,3 +50,25 @@ reverseThrougMatrixInPlace([
   [6, 7, 8, 9],
   [10, 11, 12, 13, 14],
 ]); // expects [[5, 4, 3, 2, 1], [9, 8, 7, 6], [14, 13, 12, 11, 10]]
+
+// reversing a string
+
+function strReversal(str) {
+  let reversed = "";
+
+  // sanitzing the string
+  str = str.toLowerCase().replace(/[^a-z]/g, "");
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+
+  return reversed === str;
+}
+console.log(strReversal("racecar")); // expects true
+console.log(strReversal("hello")); // expects false
+console.log(strReversal("madam")); // expects true
+console.log(strReversal("tacocat")); // expects true
+console.log(strReversal("radada")); // expects false
+console.log(strReversal("eee.ra,d ar EEE!!!")); // expects true
+console.log(strReversal("321motteg______gottem123")); // expects false
