@@ -22,11 +22,10 @@ function pullLettersOut(matrix) {
       newArr.push(matrix[i][0]);
     }
   }
-  return console.log("\nNEW ARRAY: ", newArr);
+  return console.log("\npullLettersOut\tNEW ARRAY: ", newArr);
 }
 pullLettersOut([
   [1, 2, 3, 4, 5],
   [6, 7, 8, 9],
   [10, 11, 12, 13, 14],
-]);
-// pullLettersOut([["Act appropriate"], ["Be wise"], ["Care deeply"]]);
+]); // expects [1, 6, 10]
