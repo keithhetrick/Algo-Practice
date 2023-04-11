@@ -17,5 +17,5 @@ function search(nums, target) {
   }
   return -1;
 }
-search([-1, 0, 3, 5, 9, 12], 9); // expects 4
-search([-1, 0, 3, 5, 9, 12], 2); // expects -1
+console.log(search([-1, 0, 3, 5, 9, 12], 9)); // expects 4
+console.log(search([-1, 0, 3, 5, 9, 12], 2)); // expects -1
