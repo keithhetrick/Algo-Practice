@@ -6,6 +6,7 @@ function climbStairs(n) {
   let b = 1;
   for (let i = 2; i <= n; i++) [a, b] = [b, a + b];
 
+  console.log(b);
   return b;
 }
 climbStairs(2); // expects 2

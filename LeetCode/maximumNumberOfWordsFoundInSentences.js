@@ -14,7 +14,7 @@ var mostWordsFound = function (sentences) {
     let words = sentence.split(" ");
     wordCounter = Math.max(wordCounter, words.length);
   }
-  return wordCounter;
+  return console.log(wordCounter);
 };
 mostWordsFound([
   "alice and bob love leetcode",

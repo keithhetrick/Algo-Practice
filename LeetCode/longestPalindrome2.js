@@ -15,7 +15,7 @@ function longestPalindrome(s) {
       set.add(s[i]);
     }
   }
-  return count + (set.size > 0 ? 1 : 0);
+  return console.log(count + (set.size > 0 ? 1 : 0));
 }
 longestPalindrome("abccccdd"); // expects 7
 longestPalindrome("a"); // expects 1

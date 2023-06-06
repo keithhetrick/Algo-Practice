@@ -2,10 +2,10 @@
 // https://leetcode.com/problems/detect-capital/
 
 function detectCapitalUse(word) {
-  return (
+  return console.log(
     word === word.toUpperCase() ||
-    word === word.toLowerCase() ||
-    word === word[0].toUpperCase() + word.slice(1).toLowerCase()
+      word === word.toLowerCase() ||
+      word === word[0].toUpperCase() + word.slice(1).toLowerCase()
   );
 }
 detectCapitalUse("USA"); // expects true

@@ -4,17 +4,35 @@
 var balancedStringSplit = function (s) {
   let count = 0;
   let result = 0;
+
   for (let i = 0; i < s.length; i++) {
-    if (s[i] === "R") {
-      count++;
-    } else {
-      count--;
+    // ---------------- LOGIC USING "IF" STATEMENT ---------------- \\
+    // if (s[i] === "R") {
+    //   count++;
+    // } else {
+    //   count--;
+    // }
+    // if (count === 0) {
+    //   result++;
+    //  ----------------------------------------------------------- //
+
+    // ---------------- LOGIC USING "SWITCH" STATEMENT ---------------- \\
+    switch (s[i]) {
+      case "R":
+        count++;
+        break;
+      case "L":
+        count--;
+        break;
     }
     if (count === 0) {
       result++;
     }
+
+    //  ----------------------------------------------------------- //
   }
-  return result;
+
+  return console.log(result);
 };
 balancedStringSplit("RLRRLLRLRL"); // expects 4
 balancedStringSplit("RLRRRLLRLL"); // expects 2

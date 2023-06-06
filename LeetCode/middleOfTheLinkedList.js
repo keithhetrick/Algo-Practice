@@ -13,7 +13,7 @@ function middleNode(head) {
     slow = slow.next;
     fast = fast.next.next;
   }
-  return slow;
+  return console.log(slow);
 }
 middleNode([1, 2, 3, 4, 5]); // expects [3,4,5]
 middleNode([1, 2, 3, 4, 5, 6]); // expects [4,5,6]

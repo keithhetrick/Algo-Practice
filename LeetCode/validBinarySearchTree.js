@@ -21,7 +21,7 @@ function isValidBST(root) {
     traverse(node.right, node.val, max);
   }
   traverse(root, -Infinity, Infinity);
-  return result;
+  return console.log(result);
 }
 isValidBST([2, 1, 3]); // expects true
 isValidBST([5, 1, 4, null, null, 3, 6]); // expects false
